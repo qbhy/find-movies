@@ -1,4 +1,18 @@
 {
+    "name": "96qbhy/find-movies",
+    "description": "找电影。",
+    "license": "MIT",
+    "keywords": [
+        "电影",
+        "findMovies",
+        "找电影"
+    ],
+    "authors": [
+        {
+            "name": "96qbhy",
+            "email": "96qbhy@gmail.com"
+        }
+    ],
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "bupt1987/html-parser": "^3.0"
