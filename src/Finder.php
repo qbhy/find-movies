@@ -45,63 +45,68 @@ class Finder
         $html = (string)$result->getBody();
         $html_dom = new \HtmlParser\ParserDom($html);
         $lis = $html_dom->find('ul.search_list li');
-
         $movies = [];
-
+        $notNull = !is_null($limit);
         foreach ($lis as $key => $liItem) {
-            if (!is_null($limit) && $key >= $limit) {
+            if ($notNull && $key >= $limit) {
                 break;
             }
             $a = $liItem->find("a", 0);
             $url = 'http://www.80s.tw' . $a->getAttr('href');
             $title = clear($a->getPlainText());
-            $movieItem = [
-                'url' => $url,
-                'title' => $title
-            ];
+
             /**
              * 爬取具体的电影信息
              */
-            $movieItemResponse = static::$http->get($url);
-            $movieItemHtml = (string)$movieItemResponse->getBody();
-            $movieItemDom = new \HtmlParser\ParserDom($movieItemHtml);
-            $urls = [];
-            /**
-             * 获取电影属性
-             */
-
-            $movieItem['description'] = clear($movieItemDom->find("#movie_content")[0]->getPlainText());
-            $infoList = $movieItemDom->find("div[class=clearfix] span.span_block");
-            $infoLength = count($infoList);
-            foreach ($infoList as $index => $infoItem) {
-                $nodes = $infoItem->find('span.font_888');
-                if ($index >= $infoLength or !isset($nodes[0])) {
-                    continue;
-                }
-                $attrName = $nodes[0];
-                $attr = str_replace("：", "", $attrName->getPlainText());
-                if (isset(static::$infoMap[$attr])) {
-                    $movieItem[static::$infoMap[$attr]] = clear($infoItem->getPlainText());
-                }
-            }
-
-            /**
-             * 获取下载地址
-             */
-            $downloads = $movieItemDom->find("div#cpdl2list")[0]->find("li.dlurlelement");
-            array_shift($downloads);
-            array_pop($downloads);
-            foreach ($downloads as $download) {
-                $a = $download->find("a[rel=nofollow]");
-                $urls[] = [
-                    'title' => clear($a[0]->getPlainText()),
-                    'url' => $a[1]->getAttr("href"),
-                ];
-            }
-
-            $movieItem["downloads"] = $urls;
-            $movies[] = $movieItem;
+            $movies[] = static::fetchMovieItem($url, $title);
         }
         return $movies;
+    }
+
+    private static function fetchMovieItem($url, $title)
+    {
+        $movieItem = [
+            'url' => $url,
+            'title' => $title
+        ];
+        $movieItemResponse = static::$http->get($url);
+        $movieItemHtml = (string)$movieItemResponse->getBody();
+        $movieItemDom = new \HtmlParser\ParserDom($movieItemHtml);
+        $urls = [];
+
+        /**
+         * 获取电影属性
+         */
+        $movieItem['description'] = clear($movieItemDom->find("#movie_content")[0]->getPlainText());
+        $infoList = $movieItemDom->find("div[class=clearfix] span.span_block");
+        $infoLength = count($infoList);
+        foreach ($infoList as $index => $infoItem) {
+            $nodes = $infoItem->find('span.font_888');
+            if ($index >= $infoLength or !isset($nodes[0])) {
+                continue;
+            }
+            $attrName = $nodes[0];
+            $attr = str_replace("：", "", $attrName->getPlainText());
+            if (isset(static::$infoMap[$attr])) {
+                $movieItem[static::$infoMap[$attr]] = clear($infoItem->getPlainText());
+            }
+        }
+
+        /**
+         * 获取下载地址
+         */
+        $downloads = $movieItemDom->find("div#cpdl2list")[0]->find("li.dlurlelement");
+        array_shift($downloads);
+        array_pop($downloads);
+        foreach ($downloads as $download) {
+            $a = $download->find("a[rel=nofollow]");
+            $urls[] = [
+                'title' => clear($a[0]->getPlainText()),
+                'url' => $a[1]->getAttr("href"),
+            ];
+        }
+
+        $movieItem["downloads"] = $urls;
+        return $movieItem;
     }
 }
