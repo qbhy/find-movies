@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-cn">
+<title>
+80s站内搜索</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link href="http://s.80s.tw/css/main.css?v=0220" rel="stylesheet" type="text/css" />
+<link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<script language='javascript' src='//cdn.bootcss.com/jquery/1.8.3/jquery.min.js'></script>
+<script language="javascript" src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+<script language="javascript" src="http://s.80s.tw/js/pub.js?v=1208" ></script>
+<script language="javascript" src="http://s.80s.tw/js/jquery.scrollfollow.js" ></script>
+<script language="javascript" src="//cdn.bootcss.com/Readmore.js/2.1.0/readmore.min.js" ></script>
+<script src="//dup.baidustatic.com/js/ds.js"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?652f84236c4c73e10377e2dd54891ff3";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>    
+<div id="header" class="clearfix">
+    <div id="header-in">
+                <span class="logo"><a href="/" title="80s手机电影,专业MP4手机电影，80s手机电影官方网站">80s手机电影</a></span>
+                <div class="hiright">
+            <div id="search-b" style="">
+                <form id="zn_search_form" action="/search" method="post" target="_self">
+                    <input id="search-box" type="text" name="keyword" maxlength="100" placeholder="站内搜索..." >
+                    <input type="submit" class="search-btn" value="搜索" >
+                </form> 
+            </div>
+            <ul id="hot-words">
+                                <li><a href="/ju/20905" style="color:#F60">赌城群英会</a></li>
+                                <li><a href="/movie/20118" style="color:#F60">健忘村</a></li>
+                                <li><a href="/ju/20994" style="color:#09F">我的前半生</a></li>
+                                <li><a href="/tag/128" style="color:#666">极限特工</a></li>
+                                <li><a href="/movie/20035" style="color:#F60">欢乐好声音</a></li>
+                                <li><a href="/ju/20985" style="color:#F60">鬼吹灯之牧野诡事</a></li>
+                                <li><a href="/ju/20820" style="color:#8DBF07">楚乔传</a></li>
+                                <li><a href="/movie/20130" style="color:#09F">五十度黑</a></li>
+                                <li><a href="/movie/19111" style="color:#8DBF07">刺客信条</a></li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<div id="nav" class="clearfix">
+    <ul>
+        <li id="nav_i"><a href="/" target="_self">首页</a></li>
+        <li id="nav_movie"><a href="/movie/list">电影</a></li>
+        <li id="nav_ju"><a href="/ju/list">电视剧</a></li>
+        <li id="nav_dm"><a href="/dm/list">动漫</a></li>
+        <li id="nav_zy"><a href="/zy/list">综艺</a></li>
+        <li id="nav_mv"><a href="/mv/list">音乐MV</a></li>
+        <li id="nav_video"><a href="/video/list">视频短片</a></li>
+        <li id="nav_course"><a href="/course/list">公开课</a></li>
+		
+        <li id="nav_hot"><a href="/hot"><span style="color:#F90">热门影片</span></a></li>
+		<li id="nav_zhuanti"><a href="/zhuanti"><span style="color:#F90">电影专题</span></a></li>
+		<li id="nav_last"><a href="/top/last_update"><span style="color:#F90">最近更新</span></a></li>
+    </ul>
+</div>
+<div id="nav-under" class="clearfix">	
+    <ul>
+        <li><strong><a href="/movie/list/-2017---">2017电影</a></strong></li>
+        <li>|</li>
+        <li><a href="/movie/list/---1-">国语电影</a></li>
+        <li>|</li>
+        <li><a href="/movie/list/2----">喜剧片</a></li>
+        <li>|</li>
+        <li><a  href="/movie/list/1----">动作片</a></li>
+        <li>|</li>
+        <li><a href="/movie/list/6----">恐怖片</a></li>
+        <li>|</li>
+        <li><a href="/movie/list/3----">爱情片</a></li>
+        <li>|</li>
+        <li><a href="/movie/list/4----">科幻片</a></li>
+        <li>|</li>
+        <li><a href="/movie/list/----g">评分最高</a></li>
+        
+      
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong><a href="/ju/list">电视剧</a></strong>&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="/ju/list/----9-">大陆剧</a></li>
+        <li>|</li>
+        <li><a href="/ju/list/----11-">日韩剧</a></li>
+        <li>|</li>
+        <li><a href="/ju/list/----12-">欧美剧</a></li>
+        <li>|</li>
+        <li><a href="/ju/list/----10-">港台剧</a></li>
+    </ul>
+</div>
+    <div id="ad-bigbanner" class="ad1">
+        <script src='http://s.80s.tw/js/cai.js'></script>
+    </div>
+
+
+<div id="body">
+    <div id="block3" class="left">
+        <h2 style="font-size:20px; line-height: 40px; border-bottom: 2px solid #ccc; margin-bottom: 22px;">搜索结果：</h2>
+        
+                            <div id="search_tag_list" class="search_list_related">
+                    <i class="fa fa-tags"></i> 相关专题：
+                                                                        <a href="/tag/662" target="_blank">
+                                《超人前传》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/181" target="_blank">
+                                《超人》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/515" target="_blank">
+                                《印度超人》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/664" target="_blank">
+                                《开心超人》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/979" target="_blank">
+                                《超人回来了》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/1041" target="_blank">
+                                《混凝土革命》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/73" target="_blank">
+                                《蝙蝠侠》系列 <i class="fa fa-external-link"></i></a>
+                                                                                                <a href="/tag/1270" target="_blank">
+                                《妈妈是超人》系列 <i class="fa fa-external-link"></i></a>
+                                                            </div>
+            
+                            <div id="search_cast_list" class="search_list_related">
+                    <i class="fa fa-user"></i> 相关演员：
+                                            <a href="/actor/21315" target="_blank">奶茶超人 <i class="fa fa-external-link"></i></a>
+                                    </div>
+            
+            
+                            <ul class="clearfix search_list">
+                                                                        <li>
+                                                        <a href="/movie/16014" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [动漫]
+                                    一拳超人                                                                    </a>
+                                                                        <em>豆瓣9.2分</em>
+                                                                    <br>
+                                
+                                一击男 / ワンパンマン <br>
+                                <em>最近更新： OVA第6集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/17361" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    蝙蝠侠大战超人：正义黎明                                                                            (2016)
+                                                                    </a>
+                                                                        <em>豆瓣6.6分</em>
+                                                                    <br>
+                                
+                                蝙蝠侠大战超人 / 蝙蝠侠对超人：正义曙光(港/台) / 蝙蝠侠与超人：正义黎明 / Batman vs. Superman / Batman v Superman: Dawn of Justice <br>
+                                <em>更换完美字幕，180分钟完整版</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/4465" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人高校                                                                            (2005)
+                                                                    </a>
+                                                                        <em>豆瓣6.0分</em>
+                                                                    <br>
+                                
+                                超人学园 / 超人世界 <br>
+                                <em>英雄并非要有超能力，最重要的是要有一颗英雄的心</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/9531" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人：钢铁之躯                                                                            (2013)
+                                                                    </a>
+                                                                        <em>豆瓣6.8分</em>
+                                                                    <br>
+                                
+                                超人：钢铁英雄(港/台) / Superman: Man of Steel / Man of Steel <br>
+                                <em>一飞冲天</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/20254" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [综艺]
+                                    妈妈是超人[第二季]                                                                    </a>
+                                                                        <em>豆瓣6.0分</em>
+                                                                    <br>
+                                
+                                Super Mom / 妈妈是超人 第二季 <br>
+                                <em>最近更新： 0622期：超人妈妈齐变boss迎爸爸暖心告白</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/11456" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    印度超人3                                                                            (2013)
+                                                                    </a>
+                                                                        <em>豆瓣5.6分</em>
+                                                                    <br>
+                                
+                                克里斯2 / Krrish 3 <br>
+                                <em>宝莱坞超级英雄归来再战邪博士</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/19603" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人与蝙蝠侠：公众之敌                                                                            (2009)
+                                                                    </a>
+                                                                        <em>豆瓣7.0分</em>
+                                                                    <br>
+                                
+                                Superman/Batman: Public Enemies <br>
+                                <em>二人同心其利断金</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/1110" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    全民超人                                                                            (2008)
+                                                                    </a>
+                                                                        <em>豆瓣6.6分</em>
+                                                                    <br>
+                                
+                                全民超人 / 街头超人 / Tonight /  He Comes / 全民超人汉考克 <br>
+                                <em>超级能力拯救世界，嘻哈主义给你好看</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/4511" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人归来                                                                            (2006)
+                                                                    </a>
+                                                                        <em>豆瓣6.4分</em>
+                                                                    <br>
+                                
+                                超人再起 / 超人：强战回归 <br>
+                                <em>超人能否战胜心魔，再一次挽救地球于水火？</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/5240" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    神奇女侠                                                                            (2009)
+                                                                    </a>
+                                                                        <em>豆瓣6.5分</em>
+                                                                    <br>
+                                
+                                神奇女侠 / 神力女超人 / Wonder Woman <br>
+                                <em>真正的亚马逊女战士</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/11639" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    印度超人1                                                                            (2006)
+                                                                    </a>
+                                                                        <em>豆瓣6.3分</em>
+                                                                    <br>
+                                
+                                奇魔侠(台) / 印度先生 / 克里什 / Krrish <br>
+                                <em>天才超人对抗邪恶博士</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/16717" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [综艺]
+                                    超人回来了(2016)                                                                    </a>
+                                                                        <em>豆瓣9.2分</em>
+                                                                    <br>
+                                
+                                The Return of Superman / 슈퍼맨이 돌아왔다 <br>
+                                <em>最近更新： 1225期：雪炫惊喜变身圣诞老人</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/1127" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人特工队                                                                            (2004)
+                                                                    </a>
+                                                                        <em>豆瓣7.8分</em>
+                                                                    <br>
+                                
+                                超人特攻队 / 超人家族 / 超人特工队 <br>
+                                <em>迪斯尼票房过亿经典科幻动画喜剧大片</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13096" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第一季]                                                                    </a>
+                                                                        <em>豆瓣7.6分</em>
+                                                                    <br>
+                                
+                                超人前传 第一季 / Smallville <br>
+                                <em>最近更新： 第21集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/4470" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人1                                                                            (1978)
+                                                                    </a>
+                                                                        <em>豆瓣7.5分</em>
+                                                                    <br>
+                                
+                                超人 <br>
+                                <em>超人，带黑框眼镜的文秀、扮救世主的勇毅，嘶吼着逆转时空的狂怒……</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/17569" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [综艺]
+                                    妈妈是超人[第一季]                                                                    </a>
+                                                                        <em>豆瓣6.7分</em>
+                                                                    <br>
+                                
+                                妈妈是超人 <br>
+                                <em>最近更新： 0729期：拳王轩轩不惧流血</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/5456" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    我的超人前女友                                                                            (2006)
+                                                                    </a>
+                                                                        <em>豆瓣5.4分</em>
+                                                                    <br>
+                                
+                                我的超人女友 / 超女·强势回归 / 超级无敌前女友 / 我的超级前女友 / My Super Ex-Girlfriend <br>
+                                <em> 每个女超人的背后，都有一个默默爱她的小男人</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/7275" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超狗任务                                                                            (2007)
+                                                                    </a>
+                                                                        <em>豆瓣6.2分</em>
+                                                                    <br>
+                                
+                                超狗 / 超人狗 / 超人犬 / 丧家犬 / 超能特工狗 / 超狗任务 / Underdog <br>
+                                <em>狗狗穿上衣服变超人</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/6969" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人4                                                                            (1987)
+                                                                    </a>
+                                                                        <em>豆瓣5.7分</em>
+                                                                    <br>
+                                
+                                超人4 / Superman IV: The Quest for Peace <br>
+                                <em>让人感动的经典</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/8407" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人之挣脱束缚                                                                            (2013)
+                                                                    </a>
+                                                                        <em>豆瓣6.2分</em>
+                                                                    <br>
+                                
+                                超人：挣脱束缚 / Superman: Unbound <br>
+                                <em>美国科幻冒险片</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13035" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第十季]                                                                    </a>
+                                                                        <em>豆瓣8.1分</em>
+                                                                    <br>
+                                
+                                超人前传 / Smallville <br>
+                                <em>最近更新： 第21-22集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/4837" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人3                                                                            (1983)
+                                                                    </a>
+                                                                        <em>豆瓣6.3分</em>
+                                                                    <br>
+                                
+                                超人3 <br>
+                                <em>超人一恶搞，人类就发笑</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13053" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第七季]                                                                    </a>
+                                                                        <em>豆瓣8.0分</em>
+                                                                    <br>
+                                
+                                超人前传 第七季 / Smallville  <br>
+                                <em>最近更新： 第20集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13089" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第四季]                                                                    </a>
+                                                                        <em>豆瓣7.8分</em>
+                                                                    <br>
+                                
+                                超人前传 第四季 / Smallville  <br>
+                                <em>最近更新： 第22集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13034" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第九季]                                                                    </a>
+                                                                        <em>豆瓣7.9分</em>
+                                                                    <br>
+                                
+                                超人前传  第九季 / Smallville  <br>
+                                <em>最近更新： 第21集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/4492" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    超人2                                                                            (1980)
+                                                                    </a>
+                                                                        <em>豆瓣6.8分</em>
+                                                                    <br>
+                                
+                                超人续集 / 超人2 <br>
+                                <em>那是只鸟，那是架飞机，那是超人！！</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13560" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    [蜡笔小新剧场版]动感超人大战高叉魔王                                                                            (1993)
+                                                                    </a>
+                                                                        <em>豆瓣7.5分</em>
+                                                                    <br>
+                                
+                                蜡笔小新之动感超人大战泳装魔王 / クレヨンしんちゃん アクション仮面VSハイグレ魔王 <br>
+                                <em></em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13090" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第五季]                                                                    </a>
+                                                                        <em>豆瓣7.8分</em>
+                                                                    <br>
+                                
+                                超人前传 第五季 / Smallville  <br>
+                                <em>最近更新： 第22集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13088" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第三季]                                                                    </a>
+                                                                        <em>豆瓣7.7分</em>
+                                                                    <br>
+                                
+                                超人前传 第三季 / Smallville  <br>
+                                <em>最近更新： 第22集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13052" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第八季]                                                                    </a>
+                                                                        <em>豆瓣7.7分</em>
+                                                                    <br>
+                                
+                                超人前传 / Smallville  <br>
+                                <em>最近更新： 第22集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/12745" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    开心超人2：启源星之战                                                                            (2014)
+                                                                    </a>
+                                                                        <em>豆瓣5.5分</em>
+                                                                    <br>
+                                
+                                开心超人2 / Happy Heroes 2 Qiyuan Planet Wars <br>
+                                <em></em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/16036" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [动漫]
+                                    混凝土革命超人幻想[第一季]                                                                    </a>
+                                                                        <em>豆瓣8.5分</em>
+                                                                    <br>
+                                
+                                コンクリート・レボルティオ 超人幻想 <br>
+                                <em>最近更新： 第13集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/10221" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    开心超人                                                                            (2013)
+                                                                    </a>
+                                                                        <em>豆瓣6.7分</em>
+                                                                    <br>
+                                
+                                开心宝贝大电影 / Happy Heroes <br>
+                                <em>充斥着阳光、正义、善良的儿童片</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13091" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [欧美剧]
+                                    超人前传[第六季]                                                                    </a>
+                                                                        <em>豆瓣7.8分</em>
+                                                                    <br>
+                                
+                                超人前传 / Smallville  <br>
+                                <em>最近更新： 第22集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/5350" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    水银侠                                                                            (2006)
+                                                                    </a>
+                                                                        <em>豆瓣4.7分</em>
+                                                                    <br>
+                                
+                                Mercury Man / 水银人 <br>
+                                <em> 不同的意境和国度展现的另一种超人</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/5443" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    全明星超人                                                                            (2011)
+                                                                    </a>
+                                                                        <em>豆瓣6.7分</em>
+                                                                    <br>
+                                
+                                全明星超人 / All-Star Superman <br>
+                                <em>超人生命中最后的故事</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/17466" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [动漫]
+                                    混凝土革命超人幻想[第二季]                                                                    </a>
+                                                                        <em>豆瓣8.7分</em>
+                                                                    <br>
+                                
+                                Concrete Revolutio 超人幻想 第二季 / コンクリート・レボルティオ～超人幻想～THE LAST SONG <br>
+                                <em>最近更新： 第11集(全)</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/9959" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    丛林女超人                                                                            (2012)
+                                                                    </a>
+                                                                        <em>豆瓣4.9分</em>
+                                                                    <br>
+                                
+                                inara the jungle girl <br>
+                                <em>麻辣女战士</em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/11594" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [电影]
+                                    反社会超人                                                                            (2013)
+                                                                    </a>
+                                                                        <em>豆瓣4.9分</em>
+                                                                    <br>
+                                
+                                反社会分子 / Antisocial <br>
+                                <em>老友派对怎料病毒侵袭,人人自危如何重获新生 </em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/18879" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [音乐MV]
+                                    [周杰伦]超人不会飞                                                                    </a>
+                                                                <br>
+                                
+                                 <br>
+                                <em></em><br>
+                            </li>
+                                                                        <li>
+                                                        <a href="/movie/13988" target="_blank">
+                                    <i class="fa fa-film"></i>
+                                    [短片]
+                                    [暴走看啥片儿]超人系列：男神扑街之谜                                                                    </a>
+                                                                <br>
+                                
+                                 <br>
+                                <em></em><br>
+                            </li>
+                                    </ul>
+            
+                <script type="text/javascript">
+            $('li.search_top1').prependTo('ul.search_list');
+        </script>
+    </div>
+    
+    <div id="block2" class="right">
+                	                        <div id="tablist9239446" class="rs1"> 
+    <h3 class="notabtitle">
+    人气电影    </h3>
+          <ul class="me2 ">
+            <li class="clearfix" style="border-top:none !important;"> <span class="t1">
+        1        </span>
+        <a href="/movie/21030"> 
+        	<img src="//t.dyxz.la/upload/img/201707/poster_20170709_6106104_t.jpg" alt="悟空传[DVD版]" class="c1"/> </a>
+        <h3 class="t2">
+        	<span class="lang">[国语]</span>&nbsp;
+        	<a href="/movie/21030">悟空传[DVD版]</a>
+        </h3>
+        <span class="t2">
+			                                修复下载不了问题，泄漏版，特效不全                			</span> </li>
+            <li class="clearfix" > <span class="t1">
+        2        </span>
+        <a href="/movie/20887"> 
+        	<img src="//t.dyxz.la/upload/img/201706/poster_20170616_3617666_t.jpg" alt="新木乃伊" class="c1"/> </a>
+        <h3 class="t2">
+        	<span class="lang">[外语]</span>&nbsp;
+        	<a href="/movie/20887">新木乃伊</a>
+        </h3>
+        <span class="t2">
+			                                韩版硬字幕，木乃伊公主返魂复仇                			</span> </li>
+            <li class="clearfix" > <span class="t1">
+        3        </span>
+        <a href="/movie/21044"> 
+        	<img src="//t.dyxz.la/upload/img/201707/poster_20170710_7221921_t.jpg" alt="铁甲战神" class="c1"/> </a>
+        <h3 class="t2">
+        	<span class="lang">[外语]</span>&nbsp;
+        	<a href="/movie/21044">铁甲战神</a>
+        </h3>
+        <span class="t2">
+			                                人类最后一次反抗外星人入侵                			</span> </li>
+            <li class="clearfix"> <span class="t5">
+        4        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/21092">
+          猩球崛起3：终极之战[无字幕抢先版]</a>
+        </h3>
+        <span class="t4">
+        7月17日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        5        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/3871">
+          神偷奶爸</a>
+        </h3>
+        <span class="t4">
+        7月18日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        6        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/21055">
+          恶女</a>
+        </h3>
+        <span class="t4">
+        7月11日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        7        </span>
+        <h3 class="t3">  
+          [国语]&nbsp;         
+          <a href="/movie/21110">
+          扫黄</a>
+        </h3>
+        <span class="t4">
+        7月19日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        8        </span>
+        <h3 class="t3">  
+          [国语]&nbsp;         
+          <a href="/movie/21057">
+          神偷奶爸3[国语抢先版]</a>
+        </h3>
+        <span class="t4">
+        7月12日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        9        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/18872">
+          神奇女侠</a>
+        </h3>
+        <span class="t4">
+        7月2日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        10        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/20576">
+          银河护卫队2[DVD版]</a>
+        </h3>
+        <span class="t4">
+        7月19日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        11        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/20927">
+          异形：契约</a>
+        </h3>
+        <span class="t4">
+        7月4日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        12        </span>
+        <h3 class="t3">  
+          [国语]&nbsp;         
+          <a href="/movie/20984">
+          仙球大战</a>
+        </h3>
+        <span class="t4">
+        7月19日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        13        </span>
+        <h3 class="t3">  
+          [国语]&nbsp;         
+          <a href="/movie/21105">
+          爱爱囧事2</a>
+        </h3>
+        <span class="t4">
+        7月18日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        14        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/20948">
+          变形金刚5：最后的骑士[抢先版]</a>
+        </h3>
+        <span class="t4">
+        6月28日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        15        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/21129">
+          反恐特警组：潜龙突围</a>
+        </h3>
+        <span class="t4">
+        7月21日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        16        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/9458">
+          神偷奶爸2</a>
+        </h3>
+        <span class="t4">
+        7月15日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        17        </span>
+        <h3 class="t3">  
+          [国语]&nbsp;         
+          <a href="/movie/20880">
+          “吃吃”的爱</a>
+        </h3>
+        <span class="t4">
+        7月14日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        18        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/21112">
+          虾上蚂蚁</a>
+        </h3>
+        <span class="t4">
+        7月19日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        19        </span>
+        <h3 class="t3">  
+          [国语]&nbsp;         
+          <a href="/movie/21111">
+          走出尘埃</a>
+        </h3>
+        <span class="t4">
+        7月19日        </span> </li>
+            <li class="clearfix"> <span class="t5">
+        20        </span>
+        <h3 class="t3">  
+          [外语]&nbsp;         
+          <a href="/movie/21126">
+          魔术技法</a>
+        </h3>
+        <span class="t4">
+        7月20日        </span> </li>
+          </ul>
+	
+</div>
+                    </div>
+</div>
+<div id="footer" class="clearfix">
+	<div id="infooter">
+	    <ul>
+            <li><a href="http://www.80s.tw">80s手机电影</a>|</li>
+	        <li><a href="/aboutus" >关于80s</a>|</li>
+            <li><a href="/map" >网站地图</a>|</li>
+            <li><a href="/top/hot" >排行榜</a>|</li>
+            <li><a href="/contact" >联系我们</a></li>
+        </ul>	
+        <br />
+        80s手机电影官方网站( www.80s.tw ) , 专业的mp4视频网站
+	</div>
+    <div id="wap-enter">
+                <a href="http://m.80s.tw/"><i class="fa fa-sign-in"></i> 进入手机版</a>
+    </div>
+</div>
+<div id="wap-selector">
+    <a id="wap-selector-wap" href="http://m.80s.tw/">
+        <i class="fa fa-mobile"></i> 
+        <i class="fa fa-tablet"></i> 
+        <i class="fa fa-apple"></i> 
+        <i class="fa fa-android"></i> 
+        进入移动版
+    </a>
+    <a id="wap-selector-pc" href="#"><i class="fa fa-desktop"></i> 留在电脑版</a>
+</div>
+<script src="http://s.80s.tw/js/tj.js?v=1216"></script>
+</body></html>
+<script src="http://s.80s.tw/js/lazy.js"></script>
+<script src="http://s.80s.tw/js/js.js?v=0207"></script>
+
+
+
