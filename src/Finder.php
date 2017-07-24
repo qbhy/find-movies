@@ -99,10 +99,10 @@ class Finder
         array_shift($downloads);
         array_pop($downloads);
         foreach ($downloads as $download) {
-            $a = $download->find("a[rel=nofollow]");
+            $span = $download->find('span');
             $urls[] = [
-                'title' => clear($a[0]->getPlainText()),
-                'url' => $a[1]->getAttr("href"),
+                'title' => clear($span[0]->getPlainText()),
+                'url' => $span[3]->find('a')[0]->getAttr('href'),
             ];
         }
 
