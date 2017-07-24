@@ -8,105 +8,21 @@ class Finder
 {
 
     /**
-     * @var Client
+     * @var Pipe
      */
-    static $http;
+    static $pipe;
 
-    static $infoMap = [
-        '地区' => 'region',
-        '上映日期' => 'releasedAt',
-        '更新日期' => 'updatedAt',
-        '片长' => 'timeLength',
-        '语言' => 'language',
-        '类型' => 'type',
-        '导演' => 'director',
-        '豆瓣评分' => 'score'
-    ];
 
     public static function init()
     {
-        static::$http = new \GuzzleHttp\Client([
-            'headers' => ['User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36']
-        ]);
+        static::$pipe = new Pipe(__DIR__ . '/bin/findMovies');
     }
 
     public static function find($keyword, $limit = 5)
     {
-        if (!(static::$http instanceof Client)) {
+        if (!(static::$pipe instanceof Pipe)) {
             static::init();
         }
-
-        $result = static::$http->post("http://www.80s.tw/search", [
-            "form_params" => [
-                "keyword" => $keyword
-            ]
-        ]);
-
-        $html = (string)$result->getBody();
-        $html_dom = new \HtmlParser\ParserDom($html);
-        $lis = $html_dom->find('ul.search_list li');
-        $movies = [];
-        $notNull = !is_null($limit);
-        foreach ($lis as $key => $liItem) {
-            if ($notNull && $key >= $limit) {
-                break;
-            }
-            $a = $liItem->find("a", 0);
-            $url = 'http://www.80s.tw' . $a->getAttr('href');
-            $title = clear($a->getPlainText());
-
-            /**
-             * 爬取具体的电影信息
-             */
-            $movies[] = static::fetchMovieItem($url, $title);
-        }
-        return $movies;
-    }
-
-    private static function fetchMovieItem($url, $title)
-    {
-        $movieItem = [
-            'url' => $url,
-            'title' => $title
-        ];
-        $movieItemResponse = static::$http->get($url);
-        $movieItemHtml = (string)$movieItemResponse->getBody();
-        $movieItemDom = new \HtmlParser\ParserDom($movieItemHtml);
-        $urls = [];
-
-        /**
-         * 获取电影属性
-         */
-        $movieItem['description'] = clear($movieItemDom->find("#movie_content")[0]->getPlainText());
-        $infoList = $movieItemDom->find("div[class=clearfix] span.span_block");
-        $infoLength = count($infoList);
-        foreach ($infoList as $index => $infoItem) {
-            $nodes = $infoItem->find('span.font_888');
-            if ($index >= $infoLength or !isset($nodes[0])) {
-                continue;
-            }
-            $attrName = $nodes[0];
-            $attr = str_replace("：", "", $attrName->getPlainText());
-            if (isset(static::$infoMap[$attr])) {
-                $movieItem[static::$infoMap[$attr]] = clear($infoItem->getPlainText());
-            }
-        }
-
-        /**
-         * 获取下载地址
-         */
-        $downloads = $movieItemDom->find("div#cpdl2list")[0]->find("li.dlurlelement");
-        array_shift($downloads);
-        array_pop($downloads);
-        foreach ($downloads as $download) {
-            $span = $download->find('span');
-            $urls[] = [
-                'title' => clear($span[0]->getPlainText()),
-                'url' => $span[3]->find('a')[0]->getAttr('href'),
-            ];
-        }
-
-        $movieItem["downloads"] = $urls;
-        return $movieItem;
+        return static::$pipe->execute(compact('keyword', 'limit'));
     }
 }
